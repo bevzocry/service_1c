@@ -9,7 +9,9 @@
 
 Другие функции:
 - выгрузка и архивация журнала регистрации
-- выгрузка ошибок из технологического журнала (https://github.com/Polyplastic/1c-parsing-tech-log)
+- выгрузка ошибок из технологического журнала (https://github.com/Polyplastic/1c-parsing-tech-log, https://infostart.ru/1c/articles/1040073/)
 - прием заявок пользователей (https://github.com/bevzocry/ocg_service)
 - учет оборудования, выданного пользователям
 - отправка в telegram бота сообщений об ошибках и новых заявках
+
+В конфигурации использована консоль заданий (https://github.com/kuzyara/JobsConsole2019.epf)
