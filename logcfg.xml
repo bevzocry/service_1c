@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://v8.1c.ru/v8/tech-log">
+ <dump create="false"/>
+ <!-- сохраняем ошибки	//-->
+ <log location="C:\log\tech_log_v8\excp\" history="8">
+    <event>
+        <eq property="name" value="EXCP"/>
+    </event>
+    <property name="all"/>
+ </log> 
+<!-- сохраняем ошибки запросов	//-->
+<log location="C:\log\tech_log_v8\qerr" history="8">
+    <event>
+        <eq property="name" value="QERR"/>
+    </event>
+    <property name="all"/>
+ </log> 
+<!-- сохраняем конфликт блокировок	//
+ <log location="C:\log\tech_log_v8\locks\" history="8">
+   <event>
+       <eq property="name" value="EXCP"/>
+	<like property="Descr" value="Конфликт блокировок%"/>
+   </event>
+   <property name="all"/>
+ </log> -->
+<!-- сохраняем длительные запросы более 20 сек	//-->
+ <log location="C:\log\tech_log_v8\query1с" history="8">
+	<event>
+		<eq property="Name" value="SDBL"/>
+		<ge property="Durationus" value="20000000"/>
+	</event>
+	<event>
+		<eq property="Name" value="DBMSSQL"/>
+		<ge property="Durationus" value="20000000"/>
+	</event>
+	<property name="all"/>
+</log>
+</config>
